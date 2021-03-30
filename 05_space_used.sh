@@ -6,7 +6,12 @@
 
 #? usage sh ./04_space_user.sh
 
-ls data -l1
+DATA=data
 
-du -sh data/*
+echo "[i] $DATA $()"2>&2
+
+ls -l1 $DATA
+ls $DATA -Ll1
+
+du -sh $DATA/*
 
