@@ -1,6 +1,6 @@
 # back scripts
 
-simple backups 1st disk fs to backup 2nd disk
+Simple backups 1st disk fs to backup 2nd disk. https://github.com/hyphop/backup-adm
 
 + data - backup data folder
 + *.sh - scripts (non exec)
@@ -8,7 +8,7 @@ simple backups 1st disk fs to backup 2nd disk
 ## USAGE EXAMPLE
 
     blkid /dev/nvme1n1p2
-    /dev/nvme1n1p2: LABEL="backup" UUID="61c598e9-4466-4541-9079-c2f6e68dc43d" TYPE="ext4" PARTUUID="b79bec68-02"
+    /dev/nvme1n1p2: LABEL="backup" UUID="..." TYPE="ext4" PARTUUID="..."
 
     mount LABEL=backup /mnt/backup
     cd /mnt/backup/backup-adm
