@@ -40,7 +40,7 @@ for a in "$@" ; do
 	echo "$a -> $N($S) => $MNT2 <= $SNAP => $DST">&2
 	CMD mkdir -p "$MNT2" || exit 1
 	CMD mkdir -p "$DST" || exit 1
-	CMD lvcreate -pr -s -L2G -n "$NAME" $a || exit 2
+	CMD lvcreate -prw -s -L20% -n "$NAME" $a || exit 2
 	CMD mount -o ro "$SNAP" "$MNT2" || exit 3
 	CMD rsync -a --delete --info=progress2 "$MNT2"/. "$DST" || exit 4
 	CMD umount "$MNT2" || exit 5
